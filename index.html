@@ -153,80 +153,109 @@
         </div>
     </section>
 
-    <!-- Portfolio Grid -->
+    <!-- Portfolio Sections -->
     <section id="portfolio" class="bg-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="text-center mb-16">
                 <span class="text-brand-gold uppercase tracking-widest text-sm font-semibold">The Portfolio</span>
                 <h2 class="text-3xl md:text-4xl font-serif mt-2 mb-4">Capturing What Matters</h2>
                 <div class="w-20 h-1 bg-brand-sage mx-auto"></div>
             </div>
 
-            <!-- Filter Buttons (Visual only for this demo) -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="px-6 py-2 rounded-full bg-brand-dark text-white text-sm">All</button>
-                <button class="px-6 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-brand-gold hover:text-brand-gold transition-colors text-sm">Seniors</button>
-                <button class="px-6 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-brand-gold hover:text-brand-gold transition-colors text-sm">Families</button>
-                <button class="px-6 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-brand-gold hover:text-brand-gold transition-colors text-sm">Special Events</button>
+            <!-- SECTION 1: SENIORS -->
+            <div class="mb-24">
+                <!-- Category Banner: Blurred "out of focus" effect -->
+                <div class="relative h-64 overflow-hidden rounded-lg mb-8 group">
+                    <!-- Background Image (Blurred) -->
+                    <img src="https://images.unsplash.com/photo-1532519107931-15b63013d3d6?q=80&w=2000&auto=format&fit=crop" 
+                         alt="Seniors Banner" 
+                         class="w-full h-full object-cover blur-[3px] scale-105 transform transition-transform duration-700 group-hover:scale-110">
+                    <!-- Overlay Text -->
+                    <div class="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white">
+                        <h3 class="font-serif text-4xl md:text-5xl mb-2 drop-shadow-lg">Seniors</h3>
+                        <!-- Updated text to remove Class of '24 -->
+                        <p class="text-sm md:text-base tracking-[0.3em] uppercase drop-shadow-md">Portraits</p>
+                    </div>
+                </div>
+
+                <!-- 3 Image Grid for Seniors -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to seniorpic1.jpg -->
+                        <img src="seniorpic1.jpg" alt="Senior Pic 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to seniorpic2.jpg -->
+                        <img src="seniorpic2.jpg" alt="Senior Pic 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to seniorpic3.jpg -->
+                        <img src="seniorpic3.jpg" alt="Senior Pic 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Item 1: Senior -->
-                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1532519107931-15b63013d3d6?q=80&w=800&auto=format&fit=crop" alt="Senior Pic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                        <h3 class="font-serif text-2xl mb-1">Senior Year</h3>
-                        <p class="text-sm tracking-wider uppercase">Class of '24</p>
+            <!-- SECTION 2: FAMILIES -->
+            <div class="mb-24">
+                <!-- Category Banner -->
+                <div class="relative h-64 overflow-hidden rounded-lg mb-8 group">
+                    <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?q=80&w=2000&auto=format&fit=crop" 
+                         alt="Families Banner" 
+                         class="w-full h-full object-cover blur-[3px] scale-105 transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white">
+                        <h3 class="font-serif text-4xl md:text-5xl mb-2 drop-shadow-lg">Families</h3>
+                        <p class="text-sm md:text-base tracking-[0.3em] uppercase drop-shadow-md">Connection & Love</p>
                     </div>
                 </div>
 
-                <!-- Item 2: Family -->
-                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?q=80&w=800&auto=format&fit=crop" alt="Family Pic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                        <h3 class="font-serif text-2xl mb-1">The Smiths</h3>
-                        <p class="text-sm tracking-wider uppercase">Family Session</p>
+                <!-- 3 Image Grid for Families -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to familypic1.jpg -->
+                        <img src="familypic1.jpg" alt="Family Pic 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to familypic2.jpg -->
+                        <img src="familypic2.jpg" alt="Family Pic 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to familypic3.jpg -->
+                        <img src="familypic3.jpg" alt="Family Pic 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
-
-                <!-- Item 3: Homecoming/Prom -->
-                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=800&auto=format&fit=crop" alt="Prom Pic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                        <h3 class="font-serif text-2xl mb-1">Homecoming</h3>
-                        <p class="text-sm tracking-wider uppercase">Events</p>
-                    </div>
-                </div>
-
-                <!-- Item 4: Senior Fun -->
-                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Senior Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                        <h3 class="font-serif text-2xl mb-1">Golden Hour</h3>
-                        <p class="text-sm tracking-wider uppercase">Senior Portraits</p>
-                    </div>
-                </div>
-
-                <!-- Item 5: Family Candid -->
-                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=800&auto=format&fit=crop" alt="Family Candid" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                        <h3 class="font-serif text-2xl mb-1">Generations</h3>
-                        <p class="text-sm tracking-wider uppercase">Family</p>
-                    </div>
-                </div>
-
-                <!-- Item 6: Friends/Group -->
-                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop" alt="Friends" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
-                        <h3 class="font-serif text-2xl mb-1">Best Friends</h3>
-                        <p class="text-sm tracking-wider uppercase">Group Session</p>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- SECTION 3: SPECIAL EVENTS -->
+            <div class="mb-12">
+                <!-- Category Banner -->
+                <div class="relative h-64 overflow-hidden rounded-lg mb-8 group">
+                    <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=2000&auto=format&fit=crop" 
+                         alt="Special Events Banner" 
+                         class="w-full h-full object-cover blur-[3px] scale-105 transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/30 flex flex-col justify-center items-center text-white">
+                        <h3 class="font-serif text-4xl md:text-5xl mb-2 drop-shadow-lg">Special Events</h3>
+                        <p class="text-sm md:text-base tracking-[0.3em] uppercase drop-shadow-md">Homecoming / Prom</p>
+                    </div>
+                </div>
+
+                <!-- 3 Image Grid for Special Events -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to eventpic1.jpg -->
+                        <img src="eventpic1.jpg" alt="Event Pic 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to eventpic2.jpg -->
+                        <img src="eventpic2.jpg" alt="Event Pic 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="h-80 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                        <!-- Changed filename to eventpic3.jpg -->
+                        <img src="eventpic3.jpg" alt="Event Pic 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
