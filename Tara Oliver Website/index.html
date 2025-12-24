@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara Oliver Photography</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#2C2C2C',
+                        'brand-gold': '#C5A059',
+                        'brand-cream': '#F9F7F2',
+                        'brand-sage': '#8DA399',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="taraoliverlogo.png" alt="Tara Oliver Photography" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-brand-gold transition-colors">MEET TARA</a>
+                    <a href="#portfolio" class="text-sm font-medium hover:text-brand-gold transition-colors">PORTFOLIO</a>
+                    <a href="#investment" class="text-sm font-medium hover:text-brand-gold transition-colors">INVESTMENT</a>
+                    <a href="#contact" class="px-6 py-2 bg-brand-dark text-white text-sm font-medium rounded-full hover:bg-brand-gold transition-colors shadow-lg">BOOK SESSION</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark hover:text-brand-gold focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="#about" class="block px-3 py-3 text-base font-medium hover:text-brand-gold hover:bg-gray-50 rounded-md">MEET TARA</a>
+                <a href="#portfolio" class="block px-3 py-3 text-base font-medium hover:text-brand-gold hover:bg-gray-50 rounded-md">PORTFOLIO</a>
+                <a href="#investment" class="block px-3 py-3 text-base font-medium hover:text-brand-gold hover:bg-gray-50 rounded-md">INVESTMENT</a>
+                <a href="#contact" class="block mt-4 px-6 py-3 bg-brand-dark text-white font-medium rounded-full mx-auto w-3/4">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="backsplash1.jpg" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in-up">
+            <p class="text-white/90 text-sm md:text-base tracking-[0.2em] mb-4 uppercase font-medium">Capturing Families & Milestones</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+                Authentic Moments, <br/> <span class="italic text-brand-gold">Beautifully Framed.</span>
+            </h1>
+            <p class="text-white/80 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Specializing in Senior Portraits, Family Connections, and Special Events.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="px-8 py-3 bg-white text-brand-dark font-medium rounded-full hover:bg-brand-gold hover:text-white transition-all duration-300">View Gallery</a>
+                <a href="#contact" class="px-8 py-3 border border-white text-white font-medium rounded-full hover:bg-white hover:text-brand-dark transition-all duration-300">Let's Chat</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Image of Tara -->
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brand-gold rounded-lg hidden md:block"></div>
+                    <img src="taraoliver.jpg" alt="Tara Oliver" class="relative rounded-lg shadow-2xl w-full object-cover aspect-[3/4]">
+                    <div class="absolute bottom-6 right-6 bg-white p-4 shadow-lg rounded-lg max-w-xs hidden lg:block">
+                        <p class="font-serif italic text-brand-dark">"I believe the best photos aren't posed, they are felt."</p>
+                    </div>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="md:pl-10">
+                    <h2 class="text-3xl md:text-4xl font-serif mb-6 text-brand-dark">Hi, I'm Tara.</h2>
+                    <h3 class="text-xl text-brand-sage mb-6 font-medium">Your Photographer for Life's Big (and Little) Moments.</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I’ve always been the one with the camera in hand, obsessed with freezing time just for a second. My passion lies in capturing the genuine connection between families and the excitement of a high school senior ready to take on the world.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Whether it's the nervous excitement of Homecoming, the pride of a graduation cap, or just a Sunday afternoon with your family, I'm here to document it. 
+                        <br><br>
+                        <em class="text-sm text-gray-500">*Please note: I currently do not book weddings, allowing me to fully dedicate my weekends to family and portrait sessions.*</em>
+                    </p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" class="h-12 opacity-60">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfolio" class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-gold uppercase tracking-widest text-sm font-semibold">The Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-serif mt-2 mb-4">Capturing What Matters</h2>
+                <div class="w-20 h-1 bg-brand-sage mx-auto"></div>
+            </div>
+
+            <!-- Filter Buttons (Visual only for this demo) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 rounded-full bg-brand-dark text-white text-sm">All</button>
+                <button class="px-6 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-brand-gold hover:text-brand-gold transition-colors text-sm">Seniors</button>
+                <button class="px-6 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-brand-gold hover:text-brand-gold transition-colors text-sm">Families</button>
+                <button class="px-6 py-2 rounded-full border border-gray-200 text-gray-600 hover:border-brand-gold hover:text-brand-gold transition-colors text-sm">Special Events</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Item 1: Senior -->
+                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1532519107931-15b63013d3d6?q=80&w=800&auto=format&fit=crop" alt="Senior Pic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-serif text-2xl mb-1">Senior Year</h3>
+                        <p class="text-sm tracking-wider uppercase">Class of '24</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Family -->
+                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?q=80&w=800&auto=format&fit=crop" alt="Family Pic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-serif text-2xl mb-1">The Smiths</h3>
+                        <p class="text-sm tracking-wider uppercase">Family Session</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Homecoming/Prom -->
+                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=800&auto=format&fit=crop" alt="Prom Pic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-serif text-2xl mb-1">Homecoming</h3>
+                        <p class="text-sm tracking-wider uppercase">Events</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Senior Fun -->
+                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Senior Portrait" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-serif text-2xl mb-1">Golden Hour</h3>
+                        <p class="text-sm tracking-wider uppercase">Senior Portraits</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Family Candid -->
+                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=800&auto=format&fit=crop" alt="Family Candid" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-serif text-2xl mb-1">Generations</h3>
+                        <p class="text-sm tracking-wider uppercase">Family</p>
+                    </div>
+                </div>
+
+                <!-- Item 6: Friends/Group -->
+                <div class="gallery-item group relative h-80 overflow-hidden rounded-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop" alt="Friends" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-serif text-2xl mb-1">Best Friends</h3>
+                        <p class="text-sm tracking-wider uppercase">Group Session</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Investment Preview -->
+    <section id="investment" class="bg-brand-cream py-20 border-t border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif mb-12">Session Options</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-brand-cream rounded-full flex items-center justify-center mx-auto mb-6 text-brand-gold">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Senior Experience</h3>
+                    <p class="text-gray-600 text-sm mb-6">Up to 2 hours of shooting, 3 outfit changes, and multiple locations. Perfect for showing off your personality.</p>
+                    <span class="block text-brand-sage font-medium mb-4">Starting at $200</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300 transform md:-translate-y-4 border-t-4 border-brand-gold">
+                    <div class="w-16 h-16 bg-brand-cream rounded-full flex items-center justify-center mx-auto mb-6 text-brand-gold">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Family Sessions</h3>
+                    <p class="text-gray-600 text-sm mb-6">1 hour session. A mix of posed portraits and candid moments. Pets are always welcome!</p>
+                    <span class="block text-brand-sage font-medium mb-4">Starting at $250</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-brand-cream rounded-full flex items-center justify-center mx-auto mb-6 text-brand-gold">
+                        <i class="fas fa-star text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Events & Prom</h3>
+                    <p class="text-gray-600 text-sm mb-6">Capture the glitz and glam. Mini-sessions available for groups before the big dance.</p>
+                    <span class="block text-brand-sage font-medium mb-4">Custom Quote</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="contact" class="bg-brand-dark text-white py-20 relative overflow-hidden">
+        <!-- Decorative Circle -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-5xl font-serif mb-6">Ready to Book?</h2>
+            <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
+                My calendar fills up quickly, especially during Senior season and holidays. Use the link below to view my availability and reserve your date instantly.
+            </p>
+            
+            <!-- Calendly Button Mockup -->
+            <a href="javascript:void(0)" onclick="openCalendly()" class="inline-flex items-center gap-3 bg-brand-gold text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-lg transform hover:scale-105">
+                <i class="far fa-calendar-alt"></i>
+                Schedule Your Session
+            </a>
+            
+            <p class="mt-8 text-sm text-gray-500">Questions first? Email me at <a href="mailto:hello@taraoliver.com" class="underline hover:text-brand-gold">hello@taraoliver.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="block text-white font-serif text-xl tracking-wider mb-2">TARA<span class="text-brand-gold">OLIVER</span></span>
+                <span class="text-xs uppercase tracking-widest">Photography</span>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-pinterest text-xl"></i></a>
+            </div>
+            
+            <div class="text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Tara Oliver Photography.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'py-0');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Mock Calendly Function
+        function openCalendly() {
+            // In a real scenario, you would put the Calendly link here
+            // window.open('https://calendly.com/your-link', '_blank');
+            alert("This button would open Tara's Calendly scheduling page!");
+        }
+    </script>
+</body>
+</html>
