@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,6 +27,7 @@
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
+                        signature: ['"Great Vibes"', 'cursive'],
                     }
                 }
             }
@@ -57,12 +58,12 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-28"> <!-- Adjusted height to h-28 for better balance -->
+            <div class="flex justify-between items-center h-20"> <!-- Shortened height to h-20 -->
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="flex items-center">
-                        <!-- Adjusted logo size to h-24 to fill the nav bar without over-expanding -->
-                        <img src="taraoliverlogo.png" alt="Tara Oliver Photography" class="h-24 w-auto object-contain">
+                        <!-- Adjusted logo size to h-16 to fit the shorter nav bar -->
+                        <img src="taraoliverlogo.png" alt="Tara Oliver Photography" class="h-16 w-auto object-contain">
                     </a>
                 </div>
 
@@ -145,7 +146,8 @@
                         <br><br>
                         <em class="text-sm text-gray-500">*Please note: I currently do not book weddings, allowing me to fully dedicate my weekends to family and portrait sessions.*</em>
                     </p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" class="h-12 opacity-60">
+                    <!-- Replaced Image with Cursive Signature -->
+                    <p class="font-signature text-5xl text-brand-dark opacity-80 -rotate-2 mt-4">Tara Oliver</p>
                 </div>
             </div>
         </div>
